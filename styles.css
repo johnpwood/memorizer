@@ -1,0 +1,24 @@
+body {
+  background-color: #ccc;
+}
+.results {
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+nav a {
+  color:#ccc;
+  display:inline-block;
+  padding:20px;
+  border:2px solid blue;
+  margin:10px;
+  width: 150px;
+  text-align: center;
+  font-size: 2em;
+  background-color:#008;
+}
+
+nav {
+  margin:50px;
+}
