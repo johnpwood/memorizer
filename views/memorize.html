@@ -1,1 +1,8 @@
-<div>{{ test }}</div>
+<div ng-hide="memorize">Go to the Finder to pick a poem to memorize</div>
+<div ng-repeat="line in memorize[0] track by $index">
+  <span ng-repeat="word in line track by $index">
+    <span ng-click="seeable=!seeable"
+          ng-style="seeable?{'opacity':1}:{'opacity':0}"
+          > {{ word }} </span>
+  </span>
+</div>

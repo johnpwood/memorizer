@@ -1,1 +1,13 @@
-<div> {{ test }} </div>
+<form ng-submit="search()">Author:<input type="text" ng-model="author">
+or Title:<input type="text" ng-model="title">
+or any text:<input type="text" ng-model="text">
+<input type="submit">
+</form>
+<div ng-hide="results">Search by author and/or title and/or text within the poem!</div>
+<div ng-repeat="poem in results track by $index" ng-click="select($index)" ui-sref="read"class="results">
+  <div>{{ poem.title }}</div>
+  <div>---{{ poem.lines[poem.showlines[0]] }} </div>
+  <div>---{{ poem.lines[poem.showlines[1]] }} </div>
+  <div>---{{ poem.lines[poem.showlines[2]] }} </div>
+  <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ poem.author }} </div>
+</div>

@@ -1,1 +1,6 @@
-<div> {{ test }}</div>
+
+<div ng-hide="poem">Please go to the Finder to find a poem to read.</div>
+<h2> {{ poem.title }} </h2>
+<div ng-repeat="line in poem.lines"> {{ line }} </div>
+<h4> {{ poem.author }} </h4>
+<button ng-show="poem" ui-sref="memorize">Click to memorize this poem</button>

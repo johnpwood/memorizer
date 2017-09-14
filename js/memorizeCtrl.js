@@ -1,3 +1,3 @@
-angular.module('poetryApp').controller('memorizeCtrl', function($scope){
-  $scope.test = 'memorize'
+angular.module('poetryApp').controller('memorizeCtrl', function($scope, poetryService){
+  $scope.memorize = poetryService.memorize;
 })
