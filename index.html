@@ -2,10 +2,14 @@
 <html ng-app="poetryApp">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Poetry Memorizer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer" rel="stylesheet">
     <link rel=stylesheet href="styles.css">
   </head>
-  <body>
+  <body ng-controller="mainCtrl" ng-style="sty">
     <nav>
       <a ui-sref="find">Find</a>
       <a ui-sref="read">Read</a>
@@ -16,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
     <script src="js/poetryApp.js"></script>
     <script src="js/poetryService.js"></script>
+    <script src="js/mainCtrl.js"></script>
     <script src="js/findCtrl.js"></script>
     <script src="js/readCtrl.js"></script>
     <script src="js/memorizeCtrl.js"></script>
