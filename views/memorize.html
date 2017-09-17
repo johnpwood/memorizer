@@ -1,9 +1,11 @@
 
   <div class="text" ng-hide="memorize">Go to the Finder to pick a poem to memorize</div>
-  <div ng-repeat="line in memorize[0] track by $index">
+  <div ng-repeat="line in memorize track by $index">
     <span ng-repeat="word in line track by $index">
-      <span ng-click="seeable=!seeable"
-          ng-style="seeable?{'opacity':1}:{'opacity':0}"
+      <span ng-click="seeable=true"
+          ng-style="seeable || !removed(word)?visibleStyle:hiddenStyle"
           > {{ word }} </span>
     </span>
   </div>
+  <button ui-sref="memorize({step:oldStep})">Back</button>
+  <button ui-sref="memorize({step:newStep})">Forward</button>

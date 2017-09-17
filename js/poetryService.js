@@ -37,9 +37,15 @@ angular.module('poetryApp').service('poetryService', function($http){
   }
 
   this.select = function(n){
-    console.log(n);
     this.poem = this.results[n];
     this.memorize = Array(10);
     this.memorize[0] = this.poem.lines.map(x=>x.split(" "))
+    var fractions = [.05, .07, .10, .13, .15, .18, .20, .25, .25, .30]
+    for(let i = 1; i < 10; i++){
+      this.memorize[i]=this.memorize[i-1].map(function(x){
+        //console.log("did one step")
+        return x.map(function(y){return Math.random()<fractions[i]? y[0]+("_".repeat(y.length)):y;})
+      })
+    }
   }
 })
