@@ -4,12 +4,14 @@ or Title:<input type="text" ng-model="title">
 or any text:<input type="text" ng-model="text">
 <input type="submit">
 </form>
+<div class="results">
 <div ng-hide="results">Search by author and/or title and/or text within the poem!</div>
-<div ng-repeat="poem in results track by $index" ng-click="select($index)" ui-sref="read"class="results">
+<div ng-repeat="poem in results track by $index" ng-click="select($index)" ui-sref="read"class="result">
   <div>{{ poem.title }}</div>
   <div>---{{ poem.lines[poem.showlines[0]] }} </div>
   <div>---{{ poem.lines[poem.showlines[1]] }} </div>
   <div>---{{ poem.lines[poem.showlines[2]] }} </div>
   <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ poem.author }} </div>
+</div>
 </div>
 </div>

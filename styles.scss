@@ -1,10 +1,20 @@
 
-.results {
+.result {
   margin: 15px;
   padding: 15px;
   border: 1px solid black;
 }
 
+.memorize {
+  padding:10px;
+}
+
+.read {
+  padding:10px;
+}
+.results {
+  padding: 5px;
+}
 nav{
   display:flex;
   justify-content: space-around;
@@ -48,7 +58,8 @@ nav{
 
 .text {
   font-family: 'IM Fell Great Primer', serif;
-  background-color: rgba(100%,100%,100%,.4);
+  background-color: rgba(100%,100%,100%,.6);
+  border-radius: 7px;
   color: black;
 }
 
@@ -82,4 +93,22 @@ button {
   background-color: rgba(0, 0, 25%, .7);
   border: solid 5px rgba(0, 0, 25%, .5);
   background-clip: padding-box;
+}
+
+.read {
+  div:first-of-type {
+    margin-bottom:0px;
+  }
+  div:first-of-type::first-letter {
+    font-size:2.5em;
+    color:#922;
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom:0px;
+    margin-right:2px;
+  }
+  div:nth-of-type(2) {
+    margin-top:0;
+  }
 }

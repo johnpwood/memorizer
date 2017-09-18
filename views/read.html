@@ -1,7 +1,7 @@
-<div class="text">
+<div class="text read">
 <h2 ng-hide="poem">Please go to the Finder to find a poem to read.</h2>
 <h2> {{ poem.title }} </h2>
-<div class="read" ng-repeat="line in poem.lines track by index"> {{ line }} </div>
+<div ng-repeat="line in poem.lines track by $index"> {{ line }} </div>
 <h4> {{ poem.author }} </h4>
 <button ng-show="poem" ui-sref="memorize({step:1})">Click to memorize this poem</button>
 </div>
