@@ -12,6 +12,7 @@ angular.module('poetryApp').controller('memorizeCtrl', function($scope, $statePa
   $scope.hiddenStyle = {
     color: 'rgba(1,1,1,0)',
     'background-color':'rgba(0,0,0,.5)',
-    cursor:'pointer'
+    cursor:'pointer',
+    border:'1px solid black'
   }
 })

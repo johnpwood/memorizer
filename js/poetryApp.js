@@ -25,12 +25,11 @@ angular.module('poetryApp', ['ui.router']).config(
     {
         $rootScope.$on('$stateChangeStart', function(event, toState)
         {
-          console.log(toState.data.images)
-          console.log(toState.data.backgroundType)
           var rando = Math.floor(Math.random()*toState.data.images)
           $rootScope.backgroundStyle = {
           'background': 'url(views/' + toState.data.backgroundType + rando + '.jpeg) no-repeat center center',
-          'background-size': 'cover'
+          'background-size': 'cover',
+          'box-shadow': 'inset 0 0 0 1000px rgba(0,0,0,.5)'
           }
         });
     }

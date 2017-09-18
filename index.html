@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="poetryApp">
+<html ng-app="poetryApp" style="background-color:black">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,12 +10,12 @@
     <link rel=stylesheet href="styles.css">
   </head>
   <body ng-style="backgroundStyle">
-    <nav class="navbar fixed-top">
-      <a ui-sref="find">Find</a>
-      <a ui-sref="read">Read</a>
-      <a ui-sref="memorize({step:1})">Memorize</a>
+    <nav class="container">
+      <a class="bigbuttons" ui-sref="find">Find</a>
+      <a class="bigbuttons" ui-sref="read">Read</a>
+      <a class="bigbuttons" ui-sref="memorize({step:1})">Memorize</a>
     </ul></nav>
-    <ui-view></ui-view>
+    <div class="container-fluid main"><ui-view></ui-view></div>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-ui-router.js"></script>
     <script src="js/poetryApp.js"></script>

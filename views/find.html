@@ -1,4 +1,5 @@
-<form ng-submit="search()">Author:<input type="text" ng-model="author">
+<div class="find container text">
+<form class="container" ng-submit="search()">Author:<input type="text" ng-model="author">
 or Title:<input type="text" ng-model="title">
 or any text:<input type="text" ng-model="text">
 <input type="submit">
@@ -10,4 +11,5 @@ or any text:<input type="text" ng-model="text">
   <div>---{{ poem.lines[poem.showlines[1]] }} </div>
   <div>---{{ poem.lines[poem.showlines[2]] }} </div>
   <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ poem.author }} </div>
+</div>
 </div>
